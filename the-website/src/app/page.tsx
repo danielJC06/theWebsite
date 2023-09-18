@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 export default function Home() {
+	const tastyFood = process.env.NEXT_PUBLIC_TASTY_FOOD
 	return (
 		<main className="flex min-h-screen justify-center flex-col items-center p-24">
 			<div
@@ -11,7 +12,7 @@ export default function Home() {
       before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]"
 			>
 				<div>I Hope You're Hungry:</div>
-				<div>We're Grilling Hot Dogs</div>
+				<div>{`We're Grilling ${tastyFood || "Hot Dogs"}`}</div>
 			</div>
 		</main>
 	);
