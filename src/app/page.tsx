@@ -1,5 +1,6 @@
 import { redirect } from 'next/dist/server/api-utils';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
 	const tastyFood = process.env.NEXT_PUBLIC_TASTY_FOOD
@@ -14,7 +15,7 @@ export default function Home() {
 			>
 				<div>I Hope You&apos;re Hungry:</div>
 				<div>{`We're Grilling ${tastyFood || "Hot Dogs"}`}</div>
-				<a href="https://youtu.be/dQw4w9WgXcQ" target='_blank'>Home</a>
+				<Link href="https://youtu.be/dQw4w9WgXcQ" target='_blank'><button>Home</button></Link>
 			</div>
 		</main>
 	);
