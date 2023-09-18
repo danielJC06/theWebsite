@@ -1,3 +1,4 @@
+import { redirect } from 'next/dist/server/api-utils';
 import Image from 'next/image';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 			>
 				<div>I Hope You&apos;re Hungry:</div>
 				<div>{`We're Grilling ${tastyFood || "Hot Dogs"}`}</div>
+				<button onClick={()=>window.open("https://youtu.be/dQw4w9WgXcQ", "_blank")}>Home</button>
 			</div>
 		</main>
 	);
